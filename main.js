@@ -21,6 +21,7 @@ myFormularioCampus.addEventListener("submit", (e)=>{
     let data = Object.fromEntries(new FormData(e.target))
     campus[`${data.nombreSede}`] = {Camper: [], Trainers: []};
     listaSedes();
+    listaSede1();
     myFormularioCampus.reset();
 })
 
@@ -33,6 +34,16 @@ let listaSedes = ()=>{
         `);
     }
 }
+let listaSede1 = ()=>{
+    let opTrainer = document.querySelector("[name='sede1']");
+    opTrainer.innerHTML = null;
+    for (let [val, id] of Object.entries(campus)) {
+        opTrainer.insertAdjacentHTML("beforeend", `
+            <option value="${val}">${val}</option>
+        `);
+    }
+}
+
 
 myFormularioCamper.addEventListener("submit", (e)=>{
     e.preventDefault();
