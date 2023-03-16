@@ -5,35 +5,93 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="main.js" defer></script>
-    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <title>Taller 3</title>
 </head>
 <body>
-<fieldset>
-    <legend>Datos de contacto de las sedes de Campus</legend>
-    <form id="myFormularioCampus">
-        <input type="text" name="nombsede" placeholder="Nombre de la sede"><br><br>
-
-        <input type="submit" value="Guardar">
-    </form>
-</fieldset>
-<fieldset>
-    <legend>Datos del camper</legend>
-    <form id="myFormularioPErsonas">
-        <select name="sede"></select>
-        <input type="text"name="nombreCamper" placeholder="Ingrese el nombre del camper">
-        <input type="tel" name="telefonoCamper"placeholder="Ingresa el numero de telefono"><br> <br>
+    <div class="formularioo">
         <fieldset>
-            <legend>Selecciona el team al que pertenece</legend>
-               <input type="radio" name="team">Team 1 <input type="radio" name="team">Team 2
+            <legend>Datos de contacto de las sedes de Campus</legend>
+            <form id="myFormularioCampus">
+                <input type="text" name="nombreSede" placeholder="Nombre de la sede"><br><br>
+                <input type="submit" value="Guardar">
+            </form>
         </fieldset>
-        <input type="submit" value="Guardar">
-    </form>
-</fieldset>
-<fieldset>
-    <legend>Datos del trainer</legend>
-    <form id="myFormularioPErsonas">
-        <select name="sede"></select>
-    </form>
-</fieldset>
+        <fieldset>
+            <legend>Datos del camper</legend>
+            <form id="myFormularioCamper">
+                <select name="sede"></select>
+                <input type="text"name="nombreCamper" placeholder="Ingrese el nombre del camper">
+                <input type="tel" name="telefonoCamper"placeholder="Ingresa el numero de telefono">
+                <input type="text" name="correoCamper" placeholder="Ingresa el correo"> <br> <br>
+                <fieldset>
+                    <legend>Selecciona el team al que pertenece</legend>
+                        <input type="radio" name="team" value="Team1">Team 1 <input type="radio" name="team" value="Team2">Team 2 
+                </fieldset>
+                <fieldset>
+                    <legend>Selecciona el horario del team</legend> <br>
+                        Horario de jornada: <input type="time" name="horario entrada jornada" > -
+                        <input type="time" name="horario salida jornada" > <br> <br>
+                        Horario Ser: <input type="time" name="horario entrada Ser" > - <input type="time" name="horario salida Ser" > <br> <br>
+                        Horario Ingles: <input type="time" name="horario entrada Ingles" > - <input type="time" name="horario salida Ingles" >
+                </fieldset>
+                <fieldset>
+                    <legend>Inserta el piso y salon al que pertenece</legend>
+                    <input type="text" name="Salon" placeholder="Salon al que pertence">
+                        <input type="tel" name="Piso" placeholder="Piso del salon">
+                </fieldset>
+                <fieldset>
+                    <legend>Datos extra del camper</legend>
+                    <b>Nivel en el que se encuentra actualmente</b>
+                    <select name="Nivel Actual">
+                        <option value="Principiante">Principiante</option>
+                        <option value="Junior">Junior</option>
+                        <option value="Semi-senior">Semi-senior</option>
+                        <option value="Senior">Senior</option> 
+                    </select><br><br>
+                    <b>Barrio</b> <input type="text" name="barrio" placeholder="Barrio al que pertenece"> <br><br>
+                    <b>Medio de transporte</b>
+                    <select name="Medio de Transporte">
+                        <option value="Carro">Carro</option>
+                        <option value="Moto">Moto</option>
+                        <option value="Transporte publico">Transporte publico</option>
+                        <option value="Otro">Otro</option>
+                    </select><br><br>
+                    <fieldset>
+                    <legend>Segun el nivel en el que se encuentra actualmente:</legend>
+                    <input type="text" name="pre Requeisito" placeholder="Pre requisito"> <input type="text" name="tecnologia" placeholder="A que tecnologia pertenece"><br> <br>
+                    Tipo de tecnologia: <input type="radio" name="tipo de tecnologia" value="Efectiva">Electiva <input type="radio" name="tipo de tecnologia" value="Obligatoria">Obligatoria
+                    </fieldset>
+                </fieldset>
+                <input type="submit" value="Guardar">
+            </form>
+        </fieldset>
+        <fieldset>
+            <legend>Datos del trainer</legend>
+            <form id="myFormularioTrainer">
+                <select name="sede"></select>
+                <input type="text"name="nombreTrainer" placeholder="Ingrese el nombre del trainer">
+                <input type="tel" name="telefonoTrainer"placeholder="Ingresa el numero de telefono">
+                <input type="text" name="correo" placeholder="Ingresa el correo"><br> <br>
+                <fieldset>
+                    <legend>Selecciona el team al que pertenece</legend>
+                        <input type="radio" name="team">Team 1 <input type="radio" name="team">Team 2
+                </fieldset>
+                <fieldset>
+                    <legend>Selecciona el horario del trainer</legend>
+                        <input type="time" name="horario"> -
+                        <input type="time" name="horario">
+                </fieldset>
+                <fieldset>
+                    <legend>Inserta el piso y salon al que pertenece</legend>
+                    <input type="text" name="salon" placeholder="Salon al que pertence">
+                        <input type="tel" name="piso" placeholder="Piso del salon">
+                </fieldset>
+                <input type="submit" value="Guardar">
+            </form>
+        </fieldset>
+        </div>
+    </div>
+
 </body>
 </html>
