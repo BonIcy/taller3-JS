@@ -60,9 +60,9 @@ myFormularioTrainer.addEventListener("submit", (e)=>{
     e.preventDefault();
     let data = Object.fromEntries(new FormData(e.target));
     console.log(data);
-    let sede = data.sede;
-    delete data.sede;
-    campus[`${sede}`]["Camper"].unshift(data);
+    let sede1 = data.sede1;
+    delete data.sede1;
+    campus[`${sede1}`]["Trainers"].unshift(data);
     console.log(campus);
     myFormularioTrainer.reset();
 })

@@ -26,7 +26,7 @@
                 <input type="text" name="correoCamper" placeholder="Ingresa el correo"> <br> <br>
                 <fieldset>
                     <legend>Selecciona el team al que pertenece</legend>
-                        <input type="radio" name="team" value="Team1">Team 1 <input type="radio" name="team" value="Team2">Team 2 
+                        <input type="radio" name="team" value="Team1">Team 1<input type="radio" name="team" value="Team2">Team 2 
                 </fieldset>
                 <fieldset>
                     <legend>Selecciona el horario del team</legend> <br>
@@ -62,6 +62,12 @@
                     <input type="text" name="pre Requeisito" placeholder="Pre requisito"> <input type="text" name="tecnologia" placeholder="A que tecnologia pertenece"><br> <br>
                     Tipo de tecnologia: <input type="radio" name="tipo de tecnologia" value="Efectiva">Electiva <input type="radio" name="tipo de tecnologia" value="Obligatoria">Obligatoria
                     </fieldset>
+                    <fieldset>
+                        <legend>RoadMap</legend>
+                        <input type="text" name="roadMapCreditos" placeholder="Numero de creditos"> <br><br>
+                        <input type="text" name="roadMapAño" placeholder="Año del roadMap"><br> <br>
+                        <input type="text" name="roadMapAsignaturas" placeholder="Numero de Asignaturas"><br> <br>
+                        </fieldset>
                 </fieldset>
                 <input type="submit" value="Guardar">
             </form>
@@ -75,12 +81,12 @@
                 <input type="text" name="correo" placeholder="Ingresa el correo"><br> <br>
                 <fieldset>
                     <legend>Selecciona el team al que pertenece</legend>
-                        <input type="radio" name="team">Team 1 <input type="radio" name="team">Team 2
+                        <input type="radio" name="team" value="Team1">Team 1 <input type="radio" name="team" value="Team2">Team 2
                 </fieldset>
                 <fieldset>
                     <legend>Selecciona el horario del trainer</legend>
-                        <input type="time" name="horario"> -
-                        <input type="time" name="horario">
+                        <input type="time" name="horarioEntrada" value="Horario Entrada"> -
+                        <input type="time" name="horarioSalida" value="Horario Salida">
                 </fieldset>
                 <fieldset>
                     <legend>Inserta el piso y salon al que pertenece</legend>
