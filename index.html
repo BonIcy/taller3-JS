@@ -20,7 +20,7 @@
         <fieldset>
             <legend>Datos del camper</legend>
             <form id="myFormularioCamper">
-                <select name="sede"></select>
+                <select name="sede"></select> <input type="tel" name="telfonoSede" placeholder="Ingresa el numero de la sede"> <input type="text" name="direccionSede"  placeholder="Ingresa la direccion de la sede"><br> <br>
                 <input type="text"name="nombreCamper" placeholder="Ingrese el nombre del camper">
                 <input type="tel" name="telefonoCamper"placeholder="Ingresa el numero de telefono">
                 <input type="text" name="correoCamper" placeholder="Ingresa el correo"> <br> <br>
@@ -61,6 +61,7 @@
                     <legend>Segun el nivel en el que se encuentra actualmente:</legend>
                     <input type="text" name="pre Requeisito" placeholder="Pre requisito"> <input type="text" name="tecnologia" placeholder="A que tecnologia pertenece"><br> <br>
                     Tipo de tecnologia: <input type="radio" name="tipo de tecnologia" value="Efectiva">Electiva <input type="radio" name="tipo de tecnologia" value="Obligatoria">Obligatoria
+                    <br> <br>La tecnologia tiene sandbox? <br><input type="radio" name="sandbox" value="Si">Si <input type="radio" name="sandbox" value="No">No
                     </fieldset>
                     <fieldset>
                         <legend>RoadMap</legend>
@@ -75,13 +76,13 @@
         <fieldset>
             <legend>Datos del trainer</legend>
             <form id="myFormularioTrainer">
-                <select name="sede1"></select>
+                <select name="sede1"></select> <input type="tel" name="telfonoSede" placeholder="Ingresa el numero de la sede"> <input type="text" name="direccionSede"  placeholder="Ingresa la direccion de la sede"><br> <br>
                 <input type="text"name="nombreTrainer" placeholder="Ingrese el nombre del trainer">
                 <input type="tel" name="telefonoTrainer"placeholder="Ingresa el numero de telefono">
                 <input type="text" name="correo" placeholder="Ingresa el correo"><br> <br>
                 <fieldset>
                     <legend>Selecciona el team al que pertenece</legend>
-                        <input type="radio" name="team" value="Team1">Team 1 <input type="radio" name="team" value="Team2">Team 2
+                        <input type="radio" name="team" value="Team1">Team 1 <input type="radio" name="team" value="team2">Team 2
                 </fieldset>
                 <fieldset>
                     <legend>Selecciona el horario del trainer</legend>
@@ -91,7 +92,9 @@
                 <fieldset>
                     <legend>Inserta el piso y salon al que pertenece</legend>
                     <input type="text" name="salon" placeholder="Salon al que pertence">
-                        <input type="tel" name="piso" placeholder="Piso del salon">
+                    <input type="tel" name="piso" placeholder="Piso del salon">  <br> <br>
+                    Seleccionar si su tecnologia es remota o presencial <br> <input type="radio" name="Asignatura" value="Remota">Remota
+                    <input type="radio" name="Asignatura" value="Presencial">Presencial
                 </fieldset>
                 <input type="submit" value="Guardar">
             </form>

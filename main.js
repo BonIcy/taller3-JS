@@ -10,7 +10,20 @@ email, y de los campers también horarios de inglés y ser.
 barrio y medio de transporte
 1.4. De los niveles, su pre requisito, a que tecnología pertenece, si
 es electiva u obligatoria
-1.5. De la roadmap , Nro de créditos, año, Nro de asignaturas */
+1.5. De la roadmap , Nro de créditos, año, Nro de asignaturas 
+
+2. Consultas: Usando Destructuring,
+2.1 De los trainers, reportar si la asignatura (tecnología) es
+remota o presencial y de los campers el nombre de salón.
+2.2 El teléfono de la sede de Medellín y la dirección de la
+sede de Bucaramanga
+2.3 De la asignatura (tecnología) si tiene sandbox o no
+
+3. Consultas: Usando sintaxis de punto.
+3.1 Reportar, prerequisito de la asignatura (tecnología) y nro de
+créditos del roadmap
+3.2 Agregar mas objetos con mas objetos anidados de manera libre
+(por lo menos 7)*/
 let myFormularioCampus = document.querySelector("#myFormularioCampus");
 let myFormularioCamper = document.querySelector("#myFormularioCamper");
 let myFormularioTrainer = document.querySelector("#myFormularioTrainer");
@@ -19,7 +32,7 @@ let campus = {};
 myFormularioCampus.addEventListener("submit", (e)=>{
     e.preventDefault();
     let data = Object.fromEntries(new FormData(e.target))
-    campus[`${data.nombreSede}`] = {Camper: [], Trainers: []};
+    campus[`${data.nombreSede}`] = {Camper: [], Trainer: []};
     listaSedes();
     listaSede1();
     myFormularioCampus.reset();
@@ -62,7 +75,16 @@ myFormularioTrainer.addEventListener("submit", (e)=>{
     console.log(data);
     let sede1 = data.sede1;
     delete data.sede1;
-    campus[`${sede1}`]["Trainers"].unshift(data);
+    campus[`${sede1}`]["Trainer"].unshift(data);
     console.log(campus);
     myFormularioTrainer.reset();
 })
+//destructuring (no me funciono aunque intente de varias maneras, nunca me leia solo lo que pedia, me votaba el array completa y me estresé)
+/* let [asignatura, ...resto] = Trainer;
+console.log(asignatura);
+let  [ , , , salonn, ...restoo] = Camper;
+console.log(salonn);
+ */
+//sintaxis de punto(esto tampoco lo entendi muy bien, ni el para que usarlo aqui)
+/* console.log(campus.nombreSede.Camper.asignatura);
+console.log(campus.nombreSede.Camper.roadMap); */
